@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import serve from 'rollup-plugin-serve';
 import typescript from 'rollup-plugin-typescript2';
+import livereload from 'rollup-plugin-livereload';
 
 export default {
 
@@ -54,7 +55,7 @@ export default {
         }),
 
         //  See https://www.npmjs.com/package/rollup-plugin-typescript2 for config options
-        typescript(),
+        typescript({clean: true}),
 
         //  See https://www.npmjs.com/package/rollup-plugin-serve for config options
         serve({
@@ -65,7 +66,8 @@ export default {
             headers: {
                 'Access-Control-Allow-Origin': '*'
             }
-        })
+        }),
+        livereload()
 
     ]
 };
