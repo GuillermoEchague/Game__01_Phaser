@@ -1,0 +1,1915 @@
+{
+	"frames": {
+		"boxer_bark-0.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-1.png": {
+			"frame": {
+				"x": 617,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-2.png": {
+			"frame": {
+				"x": 1233,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-3.png": {
+			"frame": {
+				"x": 1849,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-4.png": {
+			"frame": {
+				"x": 2465,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-5.png": {
+			"frame": {
+				"x": 3081,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-6.png": {
+			"frame": {
+				"x": 3697,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-7.png": {
+			"frame": {
+				"x": 4313,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-8.png": {
+			"frame": {
+				"x": 4929,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_bark-9.png": {
+			"frame": {
+				"x": 5545,
+				"y": 1,
+				"w": 614,
+				"h": 688
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 614,
+				"h": 688
+			},
+			"sourceSize": {
+				"w": 614,
+				"h": 688
+			}
+		},
+		"boxer_die-0.png": {
+			"frame": {
+				"x": 1,
+				"y": 691,
+				"w": 769,
+				"h": 625
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 769,
+				"h": 625
+			},
+			"sourceSize": {
+				"w": 769,
+				"h": 625
+			}
+		},
+		"boxer_die-1.png": {
+			"frame": {
+				"x": 772,
+				"y": 691,
+				"w": 769,
+				"h": 625
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 769,
+				"h": 625
+			},
+			"sourceSize": {
+				"w": 769,
+				"h": 625
+			}
+		},
+		"boxer_die-2.png": {
+			"frame": {
+				"x": 1543,
+				"y": 691,
+				"w": 769,
+				"h": 625
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 769,
+				"h": 625
+			},
+			"sourceSize": {
+				"w": 769,
+				"h": 625
+			}
+		},
+		"boxer_die-3.png": {
+			"frame": {
+				"x": 2314,
+				"y": 691,
+				"w": 769,
+				"h": 625
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 769,
+				"h": 625
+			},
+			"sourceSize": {
+				"w": 769,
+				"h": 625
+			}
+		},
+		"boxer_die-4.png": {
+			"frame": {
+				"x": 3085,
+				"y": 691,
+				"w": 769,
+				"h": 625
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 769,
+				"h": 625
+			},
+			"sourceSize": {
+				"w": 769,
+				"h": 625
+			}
+		},
+		"boxer_idle-0.png": {
+			"frame": {
+				"x": 3856,
+				"y": 691,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-1.png": {
+			"frame": {
+				"x": 4469,
+				"y": 691,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-10.png": {
+			"frame": {
+				"x": 5082,
+				"y": 691,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-11.png": {
+			"frame": {
+				"x": 3856,
+				"y": 1286,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-12.png": {
+			"frame": {
+				"x": 4469,
+				"y": 1286,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-13.png": {
+			"frame": {
+				"x": 5082,
+				"y": 1286,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-14.png": {
+			"frame": {
+				"x": 1,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-15.png": {
+			"frame": {
+				"x": 614,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-16.png": {
+			"frame": {
+				"x": 1227,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-17.png": {
+			"frame": {
+				"x": 1840,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-18.png": {
+			"frame": {
+				"x": 2453,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-19.png": {
+			"frame": {
+				"x": 3066,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-2.png": {
+			"frame": {
+				"x": 3679,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-3.png": {
+			"frame": {
+				"x": 4292,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-4.png": {
+			"frame": {
+				"x": 4905,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-5.png": {
+			"frame": {
+				"x": 5518,
+				"y": 1881,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-6.png": {
+			"frame": {
+				"x": 1,
+				"y": 2476,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-7.png": {
+			"frame": {
+				"x": 614,
+				"y": 2476,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-8.png": {
+			"frame": {
+				"x": 1227,
+				"y": 2476,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_idle-9.png": {
+			"frame": {
+				"x": 1840,
+				"y": 2476,
+				"w": 611,
+				"h": 593
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 611,
+				"h": 593
+			},
+			"sourceSize": {
+				"w": 611,
+				"h": 593
+			}
+		},
+		"boxer_run-0.png": {
+			"frame": {
+				"x": 2453,
+				"y": 2476,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-1.png": {
+			"frame": {
+				"x": 3356,
+				"y": 2476,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-10.png": {
+			"frame": {
+				"x": 4259,
+				"y": 2476,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-11.png": {
+			"frame": {
+				"x": 5162,
+				"y": 2476,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-12.png": {
+			"frame": {
+				"x": 1,
+				"y": 3143,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-13.png": {
+			"frame": {
+				"x": 904,
+				"y": 3143,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-14.png": {
+			"frame": {
+				"x": 1807,
+				"y": 3143,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-2.png": {
+			"frame": {
+				"x": 2710,
+				"y": 3143,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-3.png": {
+			"frame": {
+				"x": 3613,
+				"y": 3143,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-4.png": {
+			"frame": {
+				"x": 4516,
+				"y": 3143,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-5.png": {
+			"frame": {
+				"x": 1,
+				"y": 3810,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-6.png": {
+			"frame": {
+				"x": 904,
+				"y": 3810,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-7.png": {
+			"frame": {
+				"x": 1807,
+				"y": 3810,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-8.png": {
+			"frame": {
+				"x": 2710,
+				"y": 3810,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_run-9.png": {
+			"frame": {
+				"x": 3613,
+				"y": 3810,
+				"w": 901,
+				"h": 665
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 901,
+				"h": 665
+			},
+			"sourceSize": {
+				"w": 901,
+				"h": 665
+			}
+		},
+		"boxer_sit-0.png": {
+			"frame": {
+				"x": 5419,
+				"y": 3143,
+				"w": 609,
+				"h": 607
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 609,
+				"h": 607
+			},
+			"sourceSize": {
+				"w": 609,
+				"h": 607
+			}
+		},
+		"boxer_sit-1.png": {
+			"frame": {
+				"x": 5419,
+				"y": 3752,
+				"w": 609,
+				"h": 607
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 609,
+				"h": 607
+			},
+			"sourceSize": {
+				"w": 609,
+				"h": 607
+			}
+		},
+		"boxer_sit-2.png": {
+			"frame": {
+				"x": 4516,
+				"y": 4361,
+				"w": 609,
+				"h": 607
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 609,
+				"h": 607
+			},
+			"sourceSize": {
+				"w": 609,
+				"h": 607
+			}
+		},
+		"boxer_sit-3.png": {
+			"frame": {
+				"x": 5127,
+				"y": 4361,
+				"w": 609,
+				"h": 607
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 609,
+				"h": 607
+			},
+			"sourceSize": {
+				"w": 609,
+				"h": 607
+			}
+		},
+		"boxer_sit-4.png": {
+			"frame": {
+				"x": 1,
+				"y": 4970,
+				"w": 609,
+				"h": 607
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 609,
+				"h": 607
+			},
+			"sourceSize": {
+				"w": 609,
+				"h": 607
+			}
+		},
+		"boxer_sitting_idle-0.png": {
+			"frame": {
+				"x": 5695,
+				"y": 691,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-1.png": {
+			"frame": {
+				"x": 5695,
+				"y": 1276,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-10.png": {
+			"frame": {
+				"x": 5738,
+				"y": 4361,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-11.png": {
+			"frame": {
+				"x": 612,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-12.png": {
+			"frame": {
+				"x": 1118,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-13.png": {
+			"frame": {
+				"x": 1624,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-14.png": {
+			"frame": {
+				"x": 2130,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-15.png": {
+			"frame": {
+				"x": 2636,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-16.png": {
+			"frame": {
+				"x": 3142,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-17.png": {
+			"frame": {
+				"x": 3648,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-18.png": {
+			"frame": {
+				"x": 5738,
+				"y": 4946,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-19.png": {
+			"frame": {
+				"x": 612,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-2.png": {
+			"frame": {
+				"x": 1118,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-3.png": {
+			"frame": {
+				"x": 1624,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-4.png": {
+			"frame": {
+				"x": 2130,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-5.png": {
+			"frame": {
+				"x": 2636,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-6.png": {
+			"frame": {
+				"x": 3142,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-7.png": {
+			"frame": {
+				"x": 3648,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-8.png": {
+			"frame": {
+				"x": 4154,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_sitting_idle-9.png": {
+			"frame": {
+				"x": 4660,
+				"y": 5531,
+				"w": 504,
+				"h": 583
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 504,
+				"h": 583
+			},
+			"sourceSize": {
+				"w": 504,
+				"h": 583
+			}
+		},
+		"boxer_stand-0.png": {
+			"frame": {
+				"x": 5166,
+				"y": 5531,
+				"w": 594,
+				"h": 588
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 594,
+				"h": 588
+			},
+			"sourceSize": {
+				"w": 594,
+				"h": 588
+			}
+		},
+		"boxer_stand-1.png": {
+			"frame": {
+				"x": 6161,
+				"y": 1,
+				"w": 594,
+				"h": 588
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 594,
+				"h": 588
+			},
+			"sourceSize": {
+				"w": 594,
+				"h": 588
+			}
+		},
+		"boxer_stand-2.png": {
+			"frame": {
+				"x": 6201,
+				"y": 591,
+				"w": 594,
+				"h": 588
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 594,
+				"h": 588
+			},
+			"sourceSize": {
+				"w": 594,
+				"h": 588
+			}
+		},
+		"boxer_stand-3.png": {
+			"frame": {
+				"x": 6201,
+				"y": 1181,
+				"w": 594,
+				"h": 588
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 594,
+				"h": 588
+			},
+			"sourceSize": {
+				"w": 594,
+				"h": 588
+			}
+		},
+		"boxer_stand-4.png": {
+			"frame": {
+				"x": 6201,
+				"y": 1771,
+				"w": 594,
+				"h": 588
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 594,
+				"h": 588
+			},
+			"sourceSize": {
+				"w": 594,
+				"h": 588
+			}
+		},
+		"boxer_walk-0.png": {
+			"frame": {
+				"x": 6131,
+				"y": 2361,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-1.png": {
+			"frame": {
+				"x": 6065,
+				"y": 2984,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-10.png": {
+			"frame": {
+				"x": 6030,
+				"y": 3607,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-11.png": {
+			"frame": {
+				"x": 5762,
+				"y": 5531,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-12.png": {
+			"frame": {
+				"x": 1,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-13.png": {
+			"frame": {
+				"x": 731,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-14.png": {
+			"frame": {
+				"x": 1461,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-2.png": {
+			"frame": {
+				"x": 2191,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-3.png": {
+			"frame": {
+				"x": 2921,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-4.png": {
+			"frame": {
+				"x": 3651,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-5.png": {
+			"frame": {
+				"x": 4381,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-6.png": {
+			"frame": {
+				"x": 5111,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-7.png": {
+			"frame": {
+				"x": 5841,
+				"y": 6154,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-8.png": {
+			"frame": {
+				"x": 6797,
+				"y": 1,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		},
+		"boxer_walk-9.png": {
+			"frame": {
+				"x": 6797,
+				"y": 624,
+				"w": 728,
+				"h": 621
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 728,
+				"h": 621
+			},
+			"sourceSize": {
+				"w": 728,
+				"h": 621
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 7526,
+			"h": 6776
+		},
+		"scale": "1"
+	}
+}

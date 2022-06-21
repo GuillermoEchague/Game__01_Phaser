@@ -1,4 +1,5 @@
 import constants from "../constants";
+import Jugador from "../gameobjects/jugador";
 
 export default class Nivel1 extends Phaser.Scene {
   private width: number;
@@ -10,6 +11,8 @@ export default class Nivel1 extends Phaser.Scene {
   private conjuntoPatrones: Phaser.Tilemaps.Tileset;
   private capaMapNivel: Phaser.Tilemaps.TilemapLayer;
   private imagenFondo: Phaser.GameObjects.TileSprite;
+  private jugador: Jugador;
+  // private jugadorBoxer: Phaser.Physics.Arcade.Sprite;
 
   constructor() {
     super(constants.ESCENAS.NIVEL1);
@@ -70,6 +73,32 @@ export default class Nivel1 extends Phaser.Scene {
       tileWidth: 16,
       tileHeight: 16,
     });
+    this.physics.world.bounds.setTo(
+      0,
+      0,
+      this.mapaNivel.widthInPixels,
+      this.mapaNivel.heightInPixels
+    );
+
+    //Crear Jugador
+    this.mapaNivel.findObject(constants.JUGADOR.ID, (d: any) => {
+      this.jugador = new Jugador({
+        escena: this,
+        x: 80,
+        y: 80,
+        texture: constants.JUGADOR.ID,
+      });
+    });
+
+    /* Las camaras siguen al jugador*/
+    this.cameras.main.setBounds(
+      0,
+      0,
+      this.mapaNivel.widthInPixels,
+      this.mapaNivel.heightInPixels
+    );
+
+    this.cameras.main.startFollow(this.jugador);
 
     this.conjuntoPatrones = this.mapaNivel.addTilesetImage(
       constants.MAPAS.TILESET
@@ -79,6 +108,7 @@ export default class Nivel1 extends Phaser.Scene {
       constants.MAPAS.NIVEL1.CAPAPLATAFORMAS,
       this.conjuntoPatrones
     );
+    this.capaMapNivel.setCollisionByExclusion([-1]);
 
     //Fondo
     this.imagenFondo = this.add
@@ -91,6 +121,65 @@ export default class Nivel1 extends Phaser.Scene {
       )
       .setOrigin(0, 0)
       .setDepth(-1);
+
+    //Animaciones
+    this.anims.create({
+      key: constants.JUGADOR.ANIMATION.ESPERA,
+      frames: this.anims.generateFrameNames(constants.JUGADOR.ID, {
+        prefix: constants.JUGADOR.ANIMATION.ESPERA + "-",
+        end: 11,
+      }),
+      frameRate: 20,
+      repeat: -1,
+    });
+
+    this.anims.create({
+      key: constants.JUGADOR.ANIMATION.CORRER,
+      frames: this.anims.generateFrameNames(constants.JUGADOR.ID, {
+        prefix: constants.JUGADOR.ANIMATION.CORRER + "-",
+        end: 11,
+      }),
+      frameRate: 20,
+      repeat: -1,
+    });
+
+    this.physics.add.collider(this.jugador, this.capaMapNivel);
+
+    //Crea sprite con posición final
+    let objetofinal: any = this.mapaNivel.createFromObjects(
+      constants.MAPAS.POSICIONFINAL,
+      { name: constants.MAPAS.POSICIONFINAL }
+    )[0];
+    this.physics.world.enable(objetofinal);
+    objetofinal.body.setAllowGravity(false);
+    objetofinal.setTexture(constants.OBJETOS.FINAL);
+    objetofinal.body.setSize(40, 50);
+    objetofinal.body.setOffset(10, 15);
+
+    //collisión para final del nivel
+    this.physics.add.collider(this.jugador, objetofinal, () => {
+      this.scene.stop(constants.ESCENAS.NIVEL1);
+      this.scene.stop(constants.ESCENAS.HUD);
+      this.scene.start(constants.ESCENAS.MENU);
+    });
+
+    // //Animaciones
+    // this.anims.create({
+    //   key: constants.JUGADOR.ANIMATIONBOXER.ESPERA,
+    //   frames: this.anims.generateFrameNames(constants.JUGADOR.IDBoxer, {
+    //     prefix: constants.JUGADOR.ANIMATIONBOXER.ESPERA + "-",
+    //     end: 20,
+    //   }),
+    //   frameRate: 20,
+    //   repeat: -1,
+    // });
+
+    // //Crear Jugador
+    // this.jugador = this.physics.add
+    //   .sprite(80, 80, constants.JUGADOR.IDBoxer)
+    //   .play(constants.JUGADOR.ANIMATIONBOXER.ESPERA);
+
+    // this.physics.add.collider(this.jugadorBoxer, this.capaMapNivel);
   }
 
   /**
@@ -113,5 +202,6 @@ export default class Nivel1 extends Phaser.Scene {
       this.scene.stop(constants.ESCENAS.HUD);
       this.scene.start(constants.ESCENAS.MENU);
     }
+    this.jugador.update();
   }
 }

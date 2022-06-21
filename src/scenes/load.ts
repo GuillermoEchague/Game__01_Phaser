@@ -43,26 +43,39 @@ export default class Load extends Phaser.Scene {
       },
       this
     );
+    //---------------------------------------------
+    this.load.path = "assets/";
     // Carga los assets del juego
-    this.load.image("logo1", "assets/phaser3-logo.png");
+    this.load.image("logo1", "phaser3-logo.png");
 
     //Mapas
     this.load.tilemapTiledJSON(
       constants.MAPAS.NIVEL1.TILEMAPJSON,
-      "assets/level/nivel1.json"
+      "level/nivel1.json"
     );
-    this.load.image(constants.MAPAS.TILESET, "assets/level/levelstyleset.png");
+    this.load.image(constants.MAPAS.TILESET, "level/levelstyleset.png");
 
     //Fondo
-    this.load.image(
-      constants.FONDOS.NIVEL1,
-      "assets/imagenes/fondos/Brown.png"
+    this.load.image(constants.FONDOS.NIVEL1, "imagenes/fondos/Brown.png");
+
+    //Fuentes
+    this.load.json(constants.FUENTES.JSON, "fuentes/fuente.json");
+    this.load.image(constants.FUENTES.IMAGEN, "fuentes/imagenFuente.png");
+
+    //Jugador
+    this.load.atlas(
+      constants.JUGADOR.ID,
+      "imagenes/jugador/ninjafrog.png",
+      "imagenes/jugador/ninjafrog.json"
+    );
+    this.load.atlas(
+      constants.JUGADOR.IDBoxer,
+      "imagenes/jugador/boxer.png",
+      "imagenes/jugador/boxer.json"
     );
 
-    //Fuentes                
-    this.load.json(constants.FUENTES.JSON, 'assets/fuentes/fuente.json');
-    this.load.image(constants.FUENTES.IMAGEN, 'assets/fuentes/imagenFuente.png');
-
+    // Objeto final
+    this.load.image(constants.OBJETOS.FINAL, "imagenes/objetos/final.png");
   }
 
   /**
