@@ -1,4 +1,6 @@
 import constants from "../constants";
+import Nivel1 from '../scenes/nivel1';
+
 
 export default class Jugador extends Phaser.Physics.Arcade.Sprite {
   //Control de entrada
@@ -6,7 +8,8 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
   private teclasWASD: any;
   private teclaEspacio: Phaser.Input.Keyboard.Key;
 
-  private escena: Phaser.Scene;
+  private escena: Nivel1;
+  private tiempoEsperaColisionActivo: boolean;
 
   constructor(config: any) {
     super(config.escena, config.x, config.y, config.texture);
@@ -49,10 +52,73 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
     ) {
       this.setVelocityY(-300);
       this.anims.stop();
-      this.setTexture(
-        constants.JUGADOR.ID,
-        constants.JUGADOR.ANIMATION.SALTO
+      this.setTexture(constants.JUGADOR.ID, constants.JUGADOR.ANIMATION.SALTO);
+    }
+  }
+  /**
+   * Método que maneja la colisión entre el jugador y un objeto enemigo
+   * Se quita vida al jugador si enemigo tca al jugador
+   * Si jugador toca al enemigo desde arriba elimina enemigo e incrementa puntos
+   * El contexto this es desde dónde se llama por eso hay que usar jugador en lugar de this
+   * @param jugador
+   * @param enemigo
+   */
+  public enemigoToca(
+    jugador: Jugador,
+    enemigo: Phaser.Physics.Arcade.Sprite
+  ): void {
+    //Hace desaparecer al enemigo si salta sobre él
+    if (
+      jugador.body.velocity.y > 100 &&
+      enemigo.body.touching.up &&
+      jugador.body.touching.down
+    ) {
+      if (!jugador.tiempoEsperaColisionActivo) {
+        let posX = enemigo.x;
+        let posY = enemigo.y;
+        enemigo.destroy();
+
+        //incrementa marcador 100puntos
+        jugador.escena.puntuation += 100;
+        jugador.escena.registry.set(
+          constants.REGISTRO.PUNTUATION,
+          jugador.escena.puntuation
+        );
+        jugador.escena.events.emit(constants.EVENTOS.PUNTUATION);
+
+        //añade efecto explosion con una animación que cuando se completa desaparece
+        let explosion: Phaser.GameObjects.Sprite = jugador.escena.add.sprite(
+          posX,
+          posY,
+          constants.ENEMIGOS.EXPLOSION.ID
+        );
+        explosion.play(constants.ENEMIGOS.EXPLOSION.ANIM);
+        explosion.once("animationcomplete", () => {
+          explosion.destroy();
+        });
+      }
+    } else if (!jugador.tiempoEsperaColisionActivo) {
+      //quita vidas y actualiza HUD
+      jugador.escena.life --;
+      jugador.escena.registry.set(
+        constants.REGISTRO.LIFE,
+        jugador.escena.life
       );
+      jugador.escena.events.emit(constants.EVENTOS.LIFES);
+
+      //activa tiempoEspera ya que al ser un overlap está colisionando constantemente
+      jugador.tiempoEsperaColisionActivo = true;
+      //lo tiñe de rojo al jugador
+      jugador.tint = 0xff0000;
+
+      //añade evento de espera para volver a la normalidad
+      jugador.escena.time.addEvent({
+        delay: 600,
+        callback: () => {
+          jugador.tiempoEsperaColisionActivo = false;
+          jugador.tint = 0xffffff;
+        },
+      });
     }
   }
 }

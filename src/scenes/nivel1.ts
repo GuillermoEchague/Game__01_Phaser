@@ -1,18 +1,27 @@
 import constants from "../constants";
 import Jugador from "../gameobjects/jugador";
+import Enemigos from "../gameobjects/enemigos";
 
 export default class Nivel1 extends Phaser.Scene {
   private width: number;
   private height: number;
-  private life: number;
-  private puntuation: number;
-
-  private mapaNivel: Phaser.Tilemaps.Tilemap;
+  public life: number;
+  public puntuation: number;
+  public mapaNivel: Phaser.Tilemaps.Tilemap;
   private conjuntoPatrones: Phaser.Tilemaps.Tileset;
   private capaMapNivel: Phaser.Tilemaps.TilemapLayer;
   private imagenFondo: Phaser.GameObjects.TileSprite;
   private jugador: Jugador;
   // private jugadorBoxer: Phaser.Physics.Arcade.Sprite;
+
+  // Tiempo Nivel
+  private segundos: number;
+  private tiempoRestante: number;
+  private tiempoAgotado: boolean;
+
+  //enemigos
+  private bunnyGroup: Enemigos;
+  private chickenGroup: Enemigos;
 
   constructor() {
     super(constants.ESCENAS.NIVEL1);
@@ -31,41 +40,45 @@ export default class Nivel1 extends Phaser.Scene {
   }
 
   create() {
-    const logo = this.add.image(400, 70, "logo1");
-    const playTxt: Phaser.GameObjects.Text = this.add
-      .text(50, this.height / 2, constants.ESCENAS.NIVEL1, {
-        fontSize: "32px",
-        color: "#FFFFFF",
-      })
-      .setInteractive();
+    // const logo = this.add.image(400, 70, "logo1");
+    // const playTxt: Phaser.GameObjects.Text = this.add
+    //   .text(50, this.height / 2, constants.ESCENAS.NIVEL1, {
+    //     fontSize: "32px",
+    //     color: "#FFFFFF",
+    //   })
+    //   .setInteractive();
 
-    const vidasTxt: Phaser.GameObjects.Text = this.add
-      .text(this.width / 2, this.height / 2, "VIDAS -", {
-        fontSize: "32px",
-        color: "#FFFFFF",
-      })
-      .setInteractive();
+    // const vidasTxt: Phaser.GameObjects.Text = this.add
+    //   .text(this.width / 2, this.height / 2, "VIDAS -", {
+    //     fontSize: "32px",
+    //     color: "#FFFFFF",
+    //   })
+    //   .setInteractive();
 
-    vidasTxt.on("pointerdown", () => {
-      this.life--;
-      this.registry.set(constants.REGISTRO.LIFE, this.life);
-      this.events.emit(constants.EVENTOS.LIFES);
-    });
+    // vidasTxt.on("pointerdown", () => {
+    //   this.life--;
+    //   this.registry.set(constants.REGISTRO.LIFE, this.life);
+    //   this.events.emit(constants.EVENTOS.LIFES);
+    // });
 
-    const puntuationTxt: Phaser.GameObjects.Text = this.add
-      .text(
-        this.width / 2,
-        this.height / 2 + 100,
-        constants.REGISTRO.PUNTUATION,
-        { fontSize: "32px", color: "#FFFFFF" }
-      )
-      .setInteractive();
+    // const puntuationTxt: Phaser.GameObjects.Text = this.add
+    //   .text(
+    //     this.width / 2,
+    //     this.height / 2 + 100,
+    //     constants.REGISTRO.PUNTUATION,
+    //     { fontSize: "32px", color: "#FFFFFF" }
+    //   )
+    //   .setInteractive();
 
-    puntuationTxt.on("pointerdown", () => {
-      this.puntuation++;
-      this.registry.set(constants.REGISTRO.PUNTUATION, this.puntuation);
-      this.events.emit(constants.EVENTOS.PUNTUATION);
-    });
+    // puntuationTxt.on("pointerdown", () => {
+    //   this.puntuation++;
+    //   this.registry.set(constants.REGISTRO.PUNTUATION, this.puntuation);
+    //   this.events.emit(constants.EVENTOS.PUNTUATION);
+    // });
+
+    this.segundos = 1;
+    this.tiempoRestante = 70;
+    this.tiempoAgotado = false;
 
     /* Cargar Tilemap */
     this.mapaNivel = this.make.tilemap({
@@ -143,6 +156,14 @@ export default class Nivel1 extends Phaser.Scene {
       repeat: -1,
     });
 
+  //crea la animacion de explosion        
+  this.anims.create({
+    key: constants.ENEMIGOS.EXPLOSION.ANIM,
+    frames: constants.ENEMIGOS.EXPLOSION.ID,
+    frameRate: 15,
+    repeat: 0
+});
+
     this.physics.add.collider(this.jugador, this.capaMapNivel);
 
     //Crea sprite con posición final
@@ -162,6 +183,45 @@ export default class Nivel1 extends Phaser.Scene {
       this.scene.stop(constants.ESCENAS.HUD);
       this.scene.start(constants.ESCENAS.MENU);
     });
+
+    //Añade los enemigos obteniendolos de la capa de objetos del mapa
+    this.bunnyGroup = new Enemigos(
+      this,
+      constants.MAPAS.ENEMIGOS,
+      constants.ENEMIGOS.BUNNY.ID,
+      constants.ENEMIGOS.BUNNY.ANIM,
+      constants.ENEMIGOS.BUNNY.VELOCIDAD,
+      { size: { x: 30, y: 30 }, offset: { x: 0, y: 10 } }
+    );
+
+    this.physics.add.collider(this.bunnyGroup, this.capaMapNivel);
+
+    this.physics.add.overlap(
+      this.jugador,
+      this.bunnyGroup,
+      this.jugador.enemigoToca,
+      null,
+      this
+    );
+
+    //Chicken Group
+    this.chickenGroup = new Enemigos(
+      this,
+      constants.MAPAS.ENEMIGOS,
+      constants.ENEMIGOS.CHICKEN.ID,
+      constants.ENEMIGOS.CHICKEN.ANIM,
+      constants.ENEMIGOS.CHICKEN.VELOCIDAD,
+      { size: { x: 30, y: 30 }, offset: { x: 0, y: 0 } }
+    );
+
+    this.physics.add.collider(this.chickenGroup, this.capaMapNivel);
+    this.physics.add.overlap(
+      this.jugador,
+      this.chickenGroup,
+      this.jugador.enemigoToca,
+      null,
+      this
+    );
 
     // //Animaciones
     // this.anims.create({
@@ -193,7 +253,7 @@ export default class Nivel1 extends Phaser.Scene {
     });
   }
 
-  update(): void {
+  update(time): void {
     //mover el fondo
     this.imagenFondo.tilePositionY -= 0.2;
 
@@ -203,5 +263,34 @@ export default class Nivel1 extends Phaser.Scene {
       this.scene.start(constants.ESCENAS.MENU);
     }
     this.jugador.update();
+    this.bunnyGroup.update();
+    this.chickenGroup.update();
+
+    // Gestion del tiempo
+    if (
+      this.segundos != Math.floor(Math.abs(time / 1000)) &&
+      !this.tiempoAgotado
+    ) {
+      this.segundos = Math.floor(Math.abs(time / 1000));
+      this.tiempoRestante--;
+      let minutos: number = Math.floor(this.tiempoRestante / 60);
+      let segundos: number = Math.floor(this.tiempoRestante - minutos * 60);
+      let textoReloj: string =
+        Phaser.Utils.String.Pad(minutos, 2, "0", 1) +
+        ":" +
+        Phaser.Utils.String.Pad(segundos, 2, "0", 1);
+      //Registro
+      this.registry.set(constants.REGISTRO.RELOJ, textoReloj);
+      //envío al HUD
+      this.events.emit(constants.EVENTOS.RELOJ);
+
+      //Cuando el tiempo termine GAME OVER
+      if (this.tiempoRestante == 0) {
+        this.tiempoAgotado = true;
+        this.scene.stop(constants.ESCENAS.NIVEL1);
+        this.scene.stop(constants.ESCENAS.HUD);
+        this.scene.start(constants.ESCENAS.MENU);
+      }
+    }
   }
 }
