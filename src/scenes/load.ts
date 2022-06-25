@@ -110,6 +110,25 @@ export default class Load extends Phaser.Scene {
       "imagenes/enemigos/explosion.png",
       { frameWidth: 38, frameHeight: 38 }
     );
+
+     //Plataformas móviles
+     this.load.image(constants.PLATAFORMAMOVIL.ID, 'imagenes/objetos/platformamovil.png');
+
+     //Sonidos
+     this.load.audio(constants.SONIDOS.EFECTOS.SALTAR, 'sonidos/efectos/saltar.ogg');
+     this.load.audio(constants.SONIDOS.EFECTOS.CAERSOBREENEMIGO, 'sonidos/efectos/caersobre.ogg');
+     this.load.audio(constants.SONIDOS.EFECTOS.QUITARVIDA, 'sonidos/efectos/vida.ogg');
+     this.load.audio(constants.SONIDOS.EFECTOS.RECOLECTAR, 'sonidos/efectos/recolectar.ogg');         
+     
+     for (let i=0; i<=2; i++)
+         this.load.audio(constants.SONIDOS.BANDASONORA + i, `sonidos/bandasonora/cartoongame${i}.ogg`);
+
+     //Recolectables
+     this.load.spritesheet(constants.RECOLECTABLES.PLATANO.ID, 'imagenes/objetos/platano.png', {frameWidth:32, frameHeight:32});
+     this.load.spritesheet(constants.RECOLECTABLES.CEREZA.ID, 'imagenes/objetos/cereza.png', {frameWidth:32, frameHeight:32});
+     this.load.spritesheet(constants.RECOLECTABLES.PINA.ID, 'imagenes/objetos/pina.png', {frameWidth:32, frameHeight:32});
+                         
+
   }
 
   /**

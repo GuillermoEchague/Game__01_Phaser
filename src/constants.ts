@@ -8,7 +8,7 @@ const constants = {
     PLAY: "JUGAR",
   },
   HUD: {
-    LIFE: "Vidas: ",
+    LIFE: "VIDAS: ",
   },
   ESCENAS: {
     CARGA: "Load",
@@ -29,6 +29,10 @@ const constants = {
     TILESET: "nivelestileset",
     POSICIONFINAL: "posicionfinal",
     ENEMIGOS: "enemigos",
+    PLATAFORMASMOVILES: "plataformasmoviles",
+    PLATAFORMAVERTICAL: "vertical",
+    PLATAFORMAHORIZONTAL: "horizontal",
+    RECOLECTABLES: "recolectables",
   },
   FONDOS: {
     NIVEL1: "Brown",
@@ -88,6 +92,33 @@ const constants = {
     EXPLOSION: {
       ID: "explosion",
       ANIM: "explota",
+    },
+  },
+  PLATAFORMAMOVIL: {
+    ID: "plataformamovil",
+    VELOCIDAD: 60,
+  },
+  SONIDOS: {
+    EFECTOS: {
+      SALTAR: "saltar",
+      CAERSOBREENEMIGO: "caersobre",
+      QUITARVIDA: "vida",
+      RECOLECTAR: "recolectar",
+    },
+    BANDASONORA: "bandasonora",
+  },
+  RECOLECTABLES: {
+    PLATANO: {
+      ID: "platano",
+      ANIM: "platanoAnim",
+    },
+    PINA: {
+      ID: "pina",
+      ANIM: "pinaAnim",
+    },
+    CEREZA: {
+      ID: "cereza",
+      ANIM: "cerezaAnim",
     },
   },
 };

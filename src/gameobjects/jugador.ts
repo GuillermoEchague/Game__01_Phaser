@@ -1,6 +1,5 @@
 import constants from "../constants";
-import Nivel1 from '../scenes/nivel1';
-
+import Nivel1 from "../scenes/nivel1";
 
 export default class Jugador extends Phaser.Physics.Arcade.Sprite {
   //Control de entrada
@@ -10,6 +9,11 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
 
   private escena: Nivel1;
   private tiempoEsperaColisionActivo: boolean;
+  private recolectando: boolean;
+
+  private saltarAudio: Phaser.Sound.BaseSound;
+  private caerSobreAudio: Phaser.Sound.BaseSound;
+  private recolectarAudio: Phaser.Sound.BaseSound;
 
   constructor(config: any) {
     super(config.escena, config.x, config.y, config.texture);
@@ -27,6 +31,19 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       Phaser.Input.Keyboard.KeyCodes.SPACE
     );
     this.play(constants.JUGADOR.ANIMATION.ESPERA);
+    // tiempo de espera para colisiones
+    //tiempo de espera para colisiones
+    this.tiempoEsperaColisionActivo = false;
+
+    this.recolectando = false;
+    //Sonidos
+    this.saltarAudio = this.escena.sound.add(constants.SONIDOS.EFECTOS.SALTAR);
+    this.caerSobreAudio = this.escena.sound.add(
+      constants.SONIDOS.EFECTOS.CAERSOBREENEMIGO
+    );
+    this.recolectarAudio = this.escena.sound.add(
+      constants.SONIDOS.EFECTOS.RECOLECTAR
+    );
   }
   update() {
     //Control de Movimiento
@@ -53,6 +70,7 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       this.setVelocityY(-300);
       this.anims.stop();
       this.setTexture(constants.JUGADOR.ID, constants.JUGADOR.ANIMATION.SALTO);
+      this.saltarAudio.play();
     }
   }
   /**
@@ -74,6 +92,7 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       jugador.body.touching.down
     ) {
       if (!jugador.tiempoEsperaColisionActivo) {
+        jugador.caerSobreAudio.play();
         let posX = enemigo.x;
         let posY = enemigo.y;
         enemigo.destroy();
@@ -99,11 +118,8 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       }
     } else if (!jugador.tiempoEsperaColisionActivo) {
       //quita vidas y actualiza HUD
-      jugador.escena.life --;
-      jugador.escena.registry.set(
-        constants.REGISTRO.LIFE,
-        jugador.escena.life
-      );
+      jugador.escena.life--;
+      jugador.escena.registry.set(constants.REGISTRO.LIFE, jugador.escena.life);
       jugador.escena.events.emit(constants.EVENTOS.LIFES);
 
       //activa tiempoEspera ya que al ser un overlap está colisionando constantemente
@@ -117,6 +133,39 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
         callback: () => {
           jugador.tiempoEsperaColisionActivo = false;
           jugador.tint = 0xffffff;
+        },
+      });
+    }
+  }
+
+  public recolecta(
+    jugador: Jugador,
+    objeto: Phaser.Physics.Arcade.Sprite
+  ): void {
+    if (!jugador.recolectando) {
+      jugador.recolectarAudio.play();
+      jugador.recolectarAudio.play();
+      jugador.recolectando = true;
+
+      //incrementa marcador 50puntos
+      jugador.escena.puntuation += 50;
+      jugador.escena.registry.set(
+        constants.REGISTRO.PUNTUATION,
+        jugador.escena.puntuation
+      );
+      jugador.escena.events.emit(constants.EVENTOS.PUNTUATION);
+
+      //realiza una animación para desaparecer
+      jugador.escena.tweens.add({
+        targets: objeto,
+        y: objeto.y - 100,
+        alpha: 0,
+        duration: 800,
+        ease: "Cubic.easeOut",
+        callbackScope: this,
+        onComplete: function () {
+          jugador.recolectando = false;
+          objeto.destroy();
         },
       });
     }

@@ -1,9 +1,9 @@
 import constants from "../constants";
 
 export default class HUD extends Phaser.Scene {
-  private vidasTxt: Phaser.GameObjects.Text;
-  private puntuationTxt: Phaser.GameObjects.Text;
-  private relojTxt: Phaser.GameObjects.Text;
+  private vidasTxt: Phaser.GameObjects.BitmapText;
+  private puntuationTxt: Phaser.GameObjects.BitmapText;
+  private relojTxt: Phaser.GameObjects.BitmapText;
 
   private width: number;
   private height: number;
@@ -26,20 +26,27 @@ export default class HUD extends Phaser.Scene {
       this
     );
     nivel1.events.on(constants.EVENTOS.RELOJ, this.actualizaReloj, this);
-    this.vidasTxt = this.add.text(
+    this.vidasTxt = this.add.bitmapText(
       20,
       20,
+      constants.FUENTES.BITMAP,
       constants.HUD.LIFE + this.registry.get(constants.REGISTRO.LIFE),
-      { fontSize: "32px", color: "#FFFFFF" }
+      20
     );
-    this.puntuationTxt = this.add.text(this.width - 50, 20, "000", {
-      fontSize: "20px",
-      color: "#FFFFFF",
-    });
-    this.relojTxt = this.add.text(this.width / 2, 20, "05:00", {
-      fontSize: "20px",
-      color: "#FFFFFF",
-    });
+    this.puntuationTxt = this.add.bitmapText(
+      this.width - 70,
+      20,
+      constants.FUENTES.BITMAP,
+      "000",
+      20
+    );
+    this.relojTxt = this.add.bitmapText(
+      this.width / 2,
+      20,
+      constants.FUENTES.BITMAP,
+      "05:00",
+      20
+    );
   }
 
   private actualizaVidas(): void {
