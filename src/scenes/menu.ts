@@ -4,6 +4,7 @@ export default class Menu extends Phaser.Scene {
   private width: number;
   private height: number;
   private bandasonoraMenu: Phaser.Sound.BaseSound;
+  private imagenFondo: Phaser.GameObjects.TileSprite;
 
   constructor() {
     super(constants.ESCENAS.MENU);
@@ -12,45 +13,102 @@ export default class Menu extends Phaser.Scene {
   init() {
     this.width = this.cameras.main.width;
     this.height = this.cameras.main.height;
+
     this.sound.stopAll();
   }
 
   preload(): void {
-    //Carga sonidos
-    this.bandasonoraMenu = this.sound.add(constants.SONIDOS.BANDASONORA + 0, {
-      loop: true,
-    });
-    this.bandasonoraMenu.play();
+    if (
+      this.registry.get(constants.REGISTRO.MUSICA) == constants.AJUSTES.SONIDOON
+    ) {
+      //Carga sonidos
+      this.bandasonoraMenu = this.sound.add(constants.SONIDOS.BANDASONORA + 0, {
+        loop: true,
+      });
+      this.bandasonoraMenu.play();
+    }
   }
+
   create() {
-    const logo = this.add.image(this.width / 2, 70, "logo1");
-    const playTxt: Phaser.GameObjects.BitmapText = this.add
+    this.imagenFondo = this.add
+      .tileSprite(
+        0,
+        0,
+        this.cameras.main.width,
+        this.cameras.main.height,
+        constants.FONDOS.MENU
+      )
+      .setOrigin(0, 0)
+      .setDepth(-1);
+
+    const logo = this.add
+      .image(
+        this.width / 2,
+        this.height / 2,
+        constants.JUGADOR.ID,
+        constants.JUGADOR.ANIMATION.SALTO
+      )
+      .setScale(10);
+
+    const tituloTxt: Phaser.GameObjects.BitmapText = this.add.bitmapText(
+      250,
+      50,
+      constants.FUENTES.BITMAP,
+      constants.MENU.TITULO,
+      20
+    );
+
+    const jugarTxt: Phaser.GameObjects.BitmapText = this.add
       .bitmapText(
         50,
-        this.height / 2,
+        this.height - 100,
         constants.FUENTES.BITMAP,
         constants.MENU.PLAY,
-        25
+        20
       )
       .setInteractive();
+    this.cambiarEscena(jugarTxt, constants.ESCENAS.SELECCIONNIVEL);
 
-    this.changeScene(playTxt, constants.ESCENAS.NIVEL1);
+    const ajustesTxt: Phaser.GameObjects.BitmapText = this.add
+      .bitmapText(
+        300,
+        500,
+        constants.FUENTES.BITMAP,
+        constants.MENU.AJUSTES,
+        20
+      )
+      .setInteractive();
+    this.cambiarEscena(ajustesTxt, constants.ESCENAS.AJUSTES, false);
+
+    const creditosTxt: Phaser.GameObjects.BitmapText = this.add
+      .bitmapText(
+        this.width - 200,
+        500,
+        constants.FUENTES.BITMAP,
+        constants.MENU.CREDITOS,
+        20
+      )
+      .setInteractive();
+    this.cambiarEscena(creditosTxt, constants.ESCENAS.CREDITOS, false);
   }
 
   /**
-   *  Cuando se pulse sobre el texto nos va a llevar a la escena indicada
-   * @param playTxt
-   * @param scene
+   * Cuando se pulse sobre el texto nos va a lleva a la escena indicada
+   * @param jugarTxt
+   * @param escena
    */
-  changeScene(playTxt: Phaser.GameObjects.BitmapText, scene: string) {
-    playTxt.on("pointerdown", () => {
-      this.cameras.main.fade(700, 0, 0, 0);
-      this.cameras.main.on("camerafadeoutcomplete", () => {
-        this.sound.stopAll();
-        this.scene.start(scene);
-        this.scene.start(constants.ESCENAS.HUD);
-        this.scene.bringToTop(constants.ESCENAS.HUD);
-      });
+  cambiarEscena(
+    texto: Phaser.GameObjects.BitmapText,
+    escena: string,
+    hud: boolean = true
+  ) {
+    texto.on("pointerdown", () => {
+      this.scene.start(escena);
     });
+  }
+
+  update(): void {
+    //movimiento scroll del fondo
+    this.imagenFondo.tilePositionY -= 0.4;
   }
 }

@@ -1,9 +1,9 @@
-import Nivel1 from '../scenes/nivel1';
+import ManejadorNivel from '../scenes/manejadornivel';
 
 export default class Recolectables extends Phaser.Physics.Arcade.Group {
-    private escena: Nivel1 ;
+    private escena: ManejadorNivel ;
     
-    constructor(escena: Nivel1, nombreObjeto: string, idObjeto: string, animObjeto: string) {
+    constructor(escena: ManejadorNivel, nombreObjeto: string, idObjeto: string, animObjeto: string) {
         super(escena.physics.world, escena);        
 
         this.escena = escena;        

@@ -14,6 +14,7 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
   private saltarAudio: Phaser.Sound.BaseSound;
   private caerSobreAudio: Phaser.Sound.BaseSound;
   private recolectarAudio: Phaser.Sound.BaseSound;
+  private vidaAudio: Phaser.Sound.BaseSound;
 
   constructor(config: any) {
     super(config.escena, config.x, config.y, config.texture);
@@ -31,7 +32,7 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       Phaser.Input.Keyboard.KeyCodes.SPACE
     );
     this.play(constants.JUGADOR.ANIMATION.ESPERA);
-    // tiempo de espera para colisiones
+    
     //tiempo de espera para colisiones
     this.tiempoEsperaColisionActivo = false;
 
@@ -43,6 +44,9 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
     );
     this.recolectarAudio = this.escena.sound.add(
       constants.SONIDOS.EFECTOS.RECOLECTAR
+    );
+    this.vidaAudio = this.escena.sound.add(
+      constants.SONIDOS.EFECTOS.QUITARVIDA
     );
   }
   update() {
@@ -92,7 +96,7 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       jugador.body.touching.down
     ) {
       if (!jugador.tiempoEsperaColisionActivo) {
-        jugador.caerSobreAudio.play();
+        jugador.reproduceAudio(jugador.caerSobreAudio); 
         let posX = enemigo.x;
         let posY = enemigo.y;
         enemigo.destroy();
@@ -118,6 +122,7 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       }
     } else if (!jugador.tiempoEsperaColisionActivo) {
       //quita vidas y actualiza HUD
+      jugador.vidaAudio.play();
       jugador.escena.life--;
       jugador.escena.registry.set(constants.REGISTRO.LIFE, jugador.escena.life);
       jugador.escena.events.emit(constants.EVENTOS.LIFES);
@@ -170,4 +175,9 @@ export default class Jugador extends Phaser.Physics.Arcade.Sprite {
       });
     }
   }
+  reproduceAudio(audio: Phaser.Sound.BaseSound): void{
+    if (this.escena.registry.get(constants.REGISTRO.EFECTOS)==constants.AJUSTES.SONIDOON){
+        audio.play();
+    }
+}
 }
